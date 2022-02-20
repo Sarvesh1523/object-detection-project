@@ -182,3 +182,59 @@ Here are few of the recommendations for the given project:
 
 1.  Getting high quality dataset with higher resolution and higher number of samples.
 2.  Using more resource-intensive ML Models that can get better results without the constraint of low resource environments like embedded systems.
+
+## Setting up in Local Machine
+
+#### Step-1 
+Open a `terminal`, clone the `object-detection-project` repository and go into the directory using the command `cd`.
+```bash
+https://github.com/Sarvesh1523/object-detection-project
+
+cd object-detection-project
+```
+
+#### Step-2
+Check `python-3` is installed then install `pip` manager for python-3.
+```bash
+#Checking python is installed
+python3 --version 
+
+#Installing pip manager
+sudo apt install python3-pip
+
+#Checking pip is installed for python3
+pip3 --version
+
+```
+
+#### Step-3
+Install `Anaconda` and create `conda virtual environment`.
+```bash
+#Follow the below link
+https://docs.anaconda.com/anaconda/install/linux/
+
+#Create the conda environment
+conda create -n tf_object_detection python=3.9 anaconda
+
+#Activating the conda environment
+conda activate tf_object_detection
+```
+#### Step-4
+Install Tensorflow Object Detection API and OpenCV.
+```bash
+# Follow the below link
+https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/install.html
+
+pip install opencv-python
+```
+
+#### Step-5
+Now we are going to run our inference.
+```bash
+
+#For single image
+python inference.py --image_path example/example.jpg
+
+#For multiple images
+python inference.py --image_path example/
+```
